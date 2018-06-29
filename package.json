@@ -1,6 +1,11 @@
 {
   "name": "feedMonster",
-  "version": "1", "author": "Trip Venturella",
+  "version": "1", 
+  "author": "Trip Venturella",
+  "main": "feedMonster.js",
+  "engines": {
+    "node": "8.9.4"
+  },
   "devDependencies": {
     "express": "^4.16.3"
   }
