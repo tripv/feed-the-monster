@@ -6,6 +6,9 @@
   "engines": {
     "node": "8.9.4"
   },
+  "scripts": {
+    "start": "node server.js"
+  },  
   "devDependencies": {
     "express": "^4.16.3"
   }
