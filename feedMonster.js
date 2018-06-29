@@ -16,6 +16,21 @@ router.get('/', (request, response) => {
 // set the server to listen on port 3000
 app.listen(3000, () => console.log('Listening on port 3000'));
 
+// all of the code from the previous section should be here
+const url = require('url');
+
+router.get('/stuff', (request, response) => {
+  var urlParts = url.parse(request.url, true);
+  var parameters = urlParts.query;
+  var myParam = parameters.myParam;
+  // e.g. myVenues = 12;
+  
+  var myResponse = `I multiplied the number you gave me (${myParam}) by 5 and got: ${myParam * 5}`;
+  
+  response.json({message: myResponse});
+});
+
+
 const originWhitelist = ['http://localhost:3000', 'https://feed-the-monster.herokuapp.com/'];
 
 // middleware route that all requests pass through
