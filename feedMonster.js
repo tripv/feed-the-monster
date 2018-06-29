@@ -16,7 +16,7 @@ router.get('/', (request, response) => {
 // set the server to listen on port 3000
 app.listen(3000, () => console.log('Listening on port 3000'));
 
-const originWhitelist = ['http://localhost:3000', 'https://example.net'];
+const originWhitelist = ['http://localhost:3000', 'https://feed-the-monster.herokuapp.com/'];
 
 // middleware route that all requests pass through
 router.use((request, response, next) => {
